@@ -13,7 +13,8 @@
     "test:unit:dev": "cypress open --component",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "prepare": "husky"
+    "prepare": "husky",
+    "precommit": "npm run lint && npm run format && npm run test:e2e"
   },
   "dependencies": {
     "pinia": "^2.1.7",
@@ -38,8 +39,6 @@
     "*.{js,jsx,vue}": [
       "eslint --fix",
       "prettier --write",
-      "build",
-      "test:e2e",
       "git add"
     ]
   }
