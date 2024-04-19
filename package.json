@@ -38,6 +38,8 @@
     "*.{js,jsx,vue}": [
       "eslint --fix",
       "prettier --write",
+      "build",
+      "test:e2e",
       "git add"
     ]
   }
